@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+function myFunction() {
+  document.getElementById("id6").innerHTML = "Paragraph changed.";
+}
+</script>
+    </head>
+    <body>
+        Topics:
+        <ul>
+        <li>Introduction to JavaScript</li>
+        <li>JavaScript can change HTML Content</li>
+        <li>JavaScript can change HTML Attribute Values</li>
+        <li>JavaScript can change HTML Styles (CSS)</li>
+        <li>JavaScript can Hide HTML Elements</li>
+        <li>JavaScript can Show HTML Elements</li>
+        <li>The script Tag</li>
+        <li>JavaScript Functions and Events</li>
+        <li>JavaScript in head or body</li>
+        <li>JavaScript in head</li>
+        <li>JavaScript in body</li>
+        <li>External JavaScript</li>
+        <li>External References</li>
+        <li>JavaScript Output</li>
+        <li>Using innerHTML</li>
+        <li>Using document.write()</li>
+        <li>Using window.alert()</li>
+        <li>Using console.log()</li>
+        <li>JavaScript Print</li>
+        <li>JavaScript Statements</li>
+        <li>Semicolons</li>
+        <li>JavaScript Code Blocks</li>
+        <li>JavaScript Values</li>
+        <li>JavaScript Literals</li>
+        <li>JavaScript Variables</li>
+        <li>JavaScript Identifiers/Names</li>
+        <li>JavaScript is Case Sensitive</li>
+        <li>JavaScript Keywords or Reserved Words</li>
+        <li>JavaScript Comments</li>
+        <li>Single Line Comments</li>
+        <li>Multi Line Comments</li>
+        <li>JavaScript Variables</li>
+        <li>When to use var, let, or const?</li>
+        <li>Using var</li>
+        <li>Using let</li>
+        <li>Using const</li>
+        </ul>
+        <br><br>
+        <h1>JavaScript can change HTML Content</h1>
+        <p>using getelementbyid</p>
+        <p id="id1">Javascript can change HTML content...</p>
+        <button type="button" onclick="document.getElementById('id1').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+        <br>
+        <h1>JavaScript can change HTML Attribute Values</h1>
+        <button onclick="document.getElementById('myImage').src='bulbon.gif'">Turn on the light</button>
+        <img id="myImage" src="fish.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='fish.gif'">Turn off the light</button>
+        <br>
+        <h1>JavaScript can change HTML Styles (CSS)</h1>
+        <p id="id2">JavaScript can change the style of an HTML element.</p>
+        <button type="button" onclick="document.getElementById('id2').style.fontSize='35px'">Click Me!</button>
+        <br>
+        <h1>JavaScript can Hide HTML Elements</h1>
+        <p id="id3">JavaScript can hide HTML elements.</p>
+        <button type="button" onclick="document.getElementById('id3').style.display='none'">Click Me!</button>
+        <br>
+        <h1>JavaScript can Show HTML Elements</h1>
+        <p id="id4" style="display:none">JavaScript can show HTML elements.</p>
+        <button type="button" onclick="document.getElementById('id4').style.display='block'">Click Me!</button>
+        <br>
+        <h1>The script Tag</h1>
+        <p id="id5"></p>
+        <script>
+        document.getElementById("id5").innerHTML = "My First JavaScript";
+        </script>
+        <br>
+        <h1>JavaScript Functions and Events</h1>
+        <h1>JavaScript in head</h1>
+        <p id="id6">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <br>
+        <h1>JavaScript in body</h1>
+        <p id="id7">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <script>
+        function myFunction() {
+        document.getElementById("id7").innerHTML = "Paragraph changed.";
+        }
+        </script>
+        <br>
+        <h1>External JavaScript</h1>
+        <p id="id8">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <script src="18thfebscript.js"></script>
+        <br>
+        <h1>External References</h1>
+        <p id="id9">A Paragraph.</p>
+        <button type="button" onclick="myFunction()">Click Me</button>
+        <script src="https://www.w3schools.com/js/myScript.js"></script>
+        <br>
+        <h1>Javascript Output</h1>
+        <h1>inner HTML</h1>
+        <p>abcd</p>
+        <p id="id10"></p>
+        <script>
+        document.getElementById("id10").innerHTML = 6 + 7;
+        </script>
+        <br>
+        <h1>Using document.write()</h1>
+        <script>
+        document.write(6 + 7);
+        </script>
+        <p>Using document.write() after an HTML document is loaded, will delete all existing HTML.
+        The document.write() method should only be used for testing.</p>
+        <br>
+        <h1>Using window.alert()</h1>
+        <script>
+        window.alert(6 + 7);	
+        </script>
+        <br>
+        <h1>Using console.log()</h1>
+        <script>
+        console.log(6 + 7);
+        </script>
+        <br>
+        <h1>JavaScript Print</h1>
+        <button type="button" onclick="window.print()">Print this page</button>
+        <br>
+        <h1>Javascript Statements</h1>
+        <p id="id11"></p>
+        <script>
+        document.getElementById("id11").innerHTML = "Hello Dolly.";
+        </script>
+        <br>
+        <h1>Semicolons</h1>
+        <p id="id12"></p>
+        <script>
+            let a, b, c;
+            a = 5;
+            b = 6;
+            c = a + b;
+            document.getElementById("id12").innerHTML = c;
+        </script>
+        <br>
+        <h1>JavaScript Code Blocks</h1>
+        <p id="id13"></p>
+        <p id="id14"></p>
+        <script>
+        function myFunction() {
+            document.getElementById("id13").innerHTML = "Hello Dolly.";
+            document.getElementById("id14").innerHTML = "How are you?";
+        }
+        </script>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <br>
+        <h1>JavaScript Values</h1>
+        <h1>JavaScript Literals</h1>
+        <h2>JavaScript Numbers</h2>
+        <p>Number can be written with or without decimals.</p>
+        <p id="demo1"></p>
+        <script>
+        document.getElementById("demo1").innerHTML = 10.50;
+        </script>
+
+        <h2>JavaScript Strings</h2>
+        <p>Strings can be written with double or single quotes.</p>
+        <p id="demo2"></p>
+        <script>
+        document.getElementById("demo2").innerHTML = 'John Doe';
+        </script>
+        <br>
+        <h1>JavaScript Variables</h1>
+        <p id="demo3"></p>
+        <script>
+            let a = 5;
+            document.getElementById("demo3").innerHTML = a;
+        </script>
+        <br>
+        <h1>JavaScript Identifiers/Names</h1>
+        <h1>Javascript is Case Sensitive</h1>
+        <h1>Javascript comments</h1>
+        <h2>Single Line Comments</h2>
+        <p id="demo4"></p>
+        <script>
+        // This is a single line comment
+        document.getElementById("demo4").innerHTML = "This is a single line comment";
+        </script>
+        <h2>Multi Line Comments</h2>
+        <p id="demo5"></p>
+        <script>
+        /* This is a multi line comment
+        written in more than one line
+        */
+        document.getElementById("demo5").innerHTML = "This is a multi line comment";
+        </script>
+        <br>
+        <h1>When to use var, let, or const?</h1>
+        <h1>using var</h1>
+        <p id="demo6"></p>
+        <script>
+            var x = 5;
+            document.getElementById("demo6").innerHTML = x;
+        </script>
+        <h1>using let</h1>
+        <p id="demo7"></p>
+        <script>    
+            let y = 6;
+            document.getElementById("demo7").innerHTML = y;
+        </script>
+        <h1>using const</h1> 
+        <p id="demo8"></p>
+        <script>
+            const z = 7;
+            document.getElementById("demo8").innerHTML = z;
+        </script>
+    </body>
+</html>
