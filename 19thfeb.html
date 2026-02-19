@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>19th February 2024</title>
+    </head>
+    <body>
+        topics:
+        <ul>
+            <li>Declaring a JavaScript Variable</li>
+            <li>One statement, Many Variables</li>
+            <li>Value = undefined</li>
+            <li>JavaScript Arithmetic</li>
+            <li>JavaScript Dollar Sign ($)</li>
+            <li>JavaScript Underscore( _)</li>
+            <li>JavaScript Let</li>
+            <li>Block Scope</li>
+            <li>Global Scope</li>
+            <li>Cannot be Redeclared</li>
+            <li>Redeclaring Variables</li>
+            <li>Difference between var, let and const</li>
+            <li>Redeclaring</li>
+            <li>JavaScript Const</li>
+            <li>Cannot be Reassigned</li>
+            <li>Constant Objects and Arrays</li>
+            <li>Constant Arrays</li>
+            <li>Constant Objects</li>
+            <li>JavaScript Operators</li>
+            <li>JavaScript Arithmetic Operators</li>
+            <li>JavaScript Assignment Operator</li>
+            <li>JavaScript Comparison Operators</li>
+            <li>JavaScript Logical Operators</li>
+            <li>JavaScript Type Operators</li>
+            <li>JavaScript Bitwise Operators</li>
+            <li>Arithmetic Operators</li>
+        </ul>
+        <h1>Declaring a JavaScript Variable</h1>
+        <p>creating a variable/declaring variable using var or let keyword. <br>
+            to assign value use equal sign. <br>
+            can assign while declaring.
+        </p>
+        <p id="id1"></p>
+        <script>
+            let name;
+            name = "opqr";
+            document.getElementById("id1").innerHTML=name;
+        </script>
+        <h1>One statement, Many Variables</h1>
+        <p>can declare many vars in one statement.start with let and seperate with commas</p>
+        <p id="id2"></p>
+        <script>
+            let person="john", car="volvo",price=200;
+            document.getElementById("id2").innerHTML=car;
+        </script>
+        <h1>Value = undefined</h1>
+        <p>varible without value is undefined</p>
+        <p id="id3"></p>
+        <script>
+            let carname;
+            document.getElementById("id3").innerHTML=carname;
+        </script>
+        <h1>JavaScript Arithmetic</h1>
+        <p>can do arithmetic with js vars using operators.</p>
+        <p>6+7=</p>
+        <p id="id4"></p>
+        <script>
+            let x=6+7;
+            document.getElementById("id4").innerHTML=x;
+        </script>
+        <p>can add strings to concatenate them.</p>
+        <p>john+doe=</p>
+        <p id="id5"></p>
+        <script>
+            let name1="john"+"doe";
+            document.getElementById("id5").innerHTML=name1;
+        </script>
+        <p>number in quotes, rest of numbers teated as string <br>
+        if the number in quotes is at last, the rest of numbers are added and then concatenated with noq. <br>
+        </p>
+        <p>"2"+5+5=</p>
+        <p id="id6"></p>
+        <script>
+            let x1="2"+5+5;
+            document.getElementById("id6").innerHTML=x1;
+        </script>
+        <p>5+5+"2" =</p>
+        <p id="id7"></p>
+        <script>
+            let x2=5+5+"2";
+            document.getElementById("id7").innerHTML=x2;
+        </script>
+        <br>
+        <h1>Javascript dollar sign:</h1>
+        <p>can be used in variable names. in jquery can be used to select html elts.. <br>
+            alias for main function
+        </p>
+        <h1>Javascript Underscore:</h1>
+        <p>can be used in variable names. alias to pvt/hidden vars</p>
+        <h1>Javascript Let:</h1>
+        <p>have block scope, should be declared before use, cant be redeclared in same scope.</p>
+        <h1>Block Scope:</h1>
+        <p>variables inside {} cant be accessed outside them</p>
+        <h1>Global Scope:</h1>
+        <p>variables declaews as var(always global, no block) declared outside {} can be accessed anywhere</p>
+        <h1>Cannot be Redeclared:</h1>
+        <p>let cannot be redeclared</p>
+        <h1>Redeclaring Variables:</h1>
+        <p>var can be redeclared, if inside a block, will also redeclare outside the block.</p>
+        <h1>Difference between var, let and const:</h1>
+        <p>var: no scope,can redeclare, can reassign <br>
+        let: has block scope, cant be redeclared, can be reassigned <br>
+        const: has block scope, cant be redeclared, cant be reassigned <br>
+        </p>
+        <h1>Redeclaring:</h1>
+        <p>var can be redeclared.</p>
+        <p id="var"></p>
+        <script>
+        var x3 = 2;
+        // Now x is 2
+
+        var x3 = 3;
+        // Now x is 3
+
+        document.getElementById("var").innerHTML = x3;
+        </script>
+        <p>can redeclare let in another block</p>
+        <p id="demo1"></p>
+        <script>
+        let x4 = 2;   // Allowed
+        {
+        let x4 = 4;   // Allowed
+        }
+        document.getElementById("demo1").innerHTML = x4;
+        </script>
+        <br>
+        <h1>JavaScript Const:</h1>
+        <p>cant be redeclared,reassigned, they have block scope.</p>
+        <h1>Cannot be Reassigned:</h1>
+        <p id="demo"></p>
+        <script>
+        try {
+        const PI = 3.1419;
+        PI = 3.14; //error;
+        }
+        catch (err) {
+        document.getElementById("demo").innerHTML = err;
+        }
+        </script>
+        <h1>Constant Objects and Arrays:</h1>
+        <p>defines a constant reference to a value <br> thus cant reassign a const value,array,obj... <br>can change elt of const array, property of const obj.</p>
+        <h1>Constant Arrays:</h1>
+        <p>can change elt of const array</p>
+        <p id="demo2"></p>
+        <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars[0] = "Toyota";
+        document.getElementById("demo2").innerHTML = cars;
+        </script>
+        <h1>Constant Objects:</h1>
+        <p>can change property of const obj</p>
+        <p id="demo3"></p>
+        <script>
+        const car1 = {type:"Fiat", model:"500", color:"white"};
+        car1.color = "red";
+        document.getElementById("demo3").innerHTML = "car color: " +car1.color;
+        </script>
+        <h1>JavaScript Operators:</h1>
+        <p>types: arithmetic,assignment,comparision,string,logical,bitwise,ternary,type.</p>
+        <h1>JavaScript Arithmetic Operators:</h1>
+        <p>+ - * / % ++ --</p>
+        <p id="demo4"></p>
+        <script>
+        let a = 3;
+        let x5 = (100 + 50) * a;
+        document.getElementById("demo4").innerHTML = x5;
+        </script>
+        <h1>Assignment Operators:</h1>
+        <p>= += -= *= /= %= **=</p>
+        <p id="demo5"></p>
+        <script>        
+        var x6 = 10;
+        x6 += 5;
+        document.getElementById("demo5").innerHTML = x6;
+        </script>
+        <h1>Comparison Operators:</h1>
+        <p>== === != !== > <  >= <= ?</p>
+        <p id="demo6"></p>
+        <script>
+        let x7 = 5;
+        document.getElementById("demo6").innerHTML = (x7 == 5);
+        </script>
+        <h1>Logical Operators:</h1>
+        <p>&& || !</p>
+        <p>x8 > 3 && x8 < 10</p>
+        <p id="demo7"></p>
+        <script>
+        let x8 = 5;
+        document.getElementById("demo7").innerHTML = (x8 > 3 && x8 < 10);
+        </script>
+        <h1>Type Operators:</h1>
+        <p>typeof instanceof</p>
+        <p id="demo8"></p>
+        <script>
+            document.getElementById("demo8").innerHTML = 
+            typeof "john" + "<br>" +
+            typeof 3.14 + "<br>" + 
+            typeof NaN + "<br>" +
+            typeof false + "<br>" +
+            typeof [1,2,3,4] + "<br>" +
+            typeof {name: 'john', age:34} + "<br>" +
+            typeof new Date() + "<br>" +
+            typeof function () {} + "<br>" +
+            typeof myCar + "<br>" +
+            typeof null;
+        </script>
+        <h1>Bitwise Operators:</h1>
+        <p>& | ^ ~ << >> >>></p>
+        <h1>Arithmetic Operators:</h1>
+        <p>+ - * / % ++ --</p>
+    </body>
+</html>
