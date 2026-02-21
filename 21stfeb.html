@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>21st feb</title>
+    </head>
+    <body>
+        <ul>
+            <li>JavaScript objects</li>
+            <li>JavaScript Events</li>
+            <li>Common Events</li>
+            <li>JavaScript Strings: String Length, Escape Characters</li>
+            <li>String Methods:</li>
+            <ul>
+            <li>JavaScript String slice()</li>
+            <li>JavaScript String substring()</li>
+            <li>JavaScript String substr()</li>
+            <li>Converting to Upper and Lower Case</li>
+            <li>JavaScript String concat()</li>
+            <li>JavaScript String trim()</li>
+            <li>JavaScript String trimStart() and trimEnd()</li>
+            <li>Replace String Content</li>
+            <li>JavaScript String Padding</li>
+            <li>JavaScript String repeat()</li>
+            <li>JavaScript String charAt()</li>
+            <li>JavaScript String charCodeAt()</li>
+            <li>JavaScript String at()</li>
+            <li>JavaScript String Search:</li>
+                <li>JavaScript String indexOf()</li>
+                <li>JavaScript String lastIndexOf()</li>
+                <li>JavaScript String search()</li>
+                <li>JavaScript String match()</li>
+                <li>JavaScript String matchAll()</li>
+                <li>JavaScript String includes()</li>
+                <li>JavaScript String startsWith()</li>
+                <li>JavaScript String endsWith()</li>
+            <li>JavaScript Template Strings: Back-Tics Syntax, Interpolation</li>
+            </ul>
+        </ul>
+            <h1>JavaScript objects</h1>
+                <p id="demo"></p> 
+                <script>
+                // Create an object:
+                const car = {type:"Fiat",
+                model:"500",
+                color:"white"};
+                // Display some data from the object:
+                document.getElementById("demo").innerHTML = "The car type is " + car.type;
+                </script>
+
+            <h1>JavaScript Events</h1>
+                <button onclick="displayDate()">The time is?</button>
+                <script>
+                function displayDate() {
+                document.getElementById("demo1").innerHTML = Date();
+                }
+                </script>
+                <p id="demo1"></p>
+                <br>
+
+            <h1>Common Events</h1>
+                <p>like onchange,onclick,onmouseover,onmouseout,onkeydown,onload</p>
+                <br>
+            <h1>JavaScript Strings: String Length, Escape Characters</h1>
+                <p>escape character like: \' \" \\ \b(backspace) \f(formfeed) \n(newline) \r(Carriage return) \t(horizontal tabular) \v(vertical tabulator)</p>
+                <br>
+                <p id="demo2">length of string:</p>
+                <script>
+                let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.getElementById("demo2").innerHTML = text.length;
+                </script>
+
+            <h1>String Methods:</h1>
+            <h1>JavaScript String slice()</h1>
+                <p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+                <p id="demo3"></p>
+                <script>
+                let str = "Apple, Banana, Kiwi";
+                document.getElementById("demo3").innerHTML = str.slice(7,13); 
+                </script>
+
+            <h1>JavaScript String substring()</h1>
+                <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+                <p id="demo4"></p>
+                <script>
+                let str1 = "Apple, Banana, Kiwi";
+                document.getElementById("demo4").innerHTML = str1.substring(7,13);
+                </script>
+
+            <h1>JavaScript String substr()</h1>
+                <p>The substr() method extract a part of a string and returns the extracted parts in a new string:</p>
+                <p id="demo5"></p>
+                <script>
+                let str2 = "Apple, Banana, Kiwi";
+                document.getElementById("demo5").innerHTML = str2.substr(7,6);
+                </script>
+
+            <h1>Converting to Upper and Lower Case</h1>
+                <button onclick="myFunction()">Try it</button>
+                <p id="demo6">Hello World!</p>
+                <script>
+                function myFunction() {
+                let text4 = document.getElementById("demo6").innerHTML;
+                document.getElementById("demo6").innerHTML =
+                text4.toUpperCase(); //text4.toLowerCase();
+                }
+                </script>
+
+            <h1>JavaScript String concat()</h1>
+                <p id="demo7"></p>
+                <script>
+                let text15 = "Hello";
+                let text25 = "World!";
+                let text35 = text15.concat(" ",text25);
+                document.getElementById("demo7").innerHTML = text35;
+                </script>
+
+            <h1>JavaScript String trim()</h1>
+                <p id="demo8"></p>
+                <script>
+                let text16 = "     Hello World!     ";
+                let text26 = text16.trim();
+                document.getElementById("demo8").innerHTML =
+                "Length text16=" + text16.length + "<br>Length2 text2=" + text26.length;
+                </script>
+
+            <h1>JavaScript String trimStart() and trimEnd()</h1>
+            <h1>Replace String Content</h1>
+            <h1>JavaScript String Padding</h1>
+                <p>The padStart() method pads a string with another string:</p>
+                <p id="demo9"></p>
+                <script>
+                let text8 = "5";
+                document.getElementById("demo9").innerHTML = text8.padEnd(4,"x");
+                </script>
+
+            <h1>JavaScript String repeat()</h1>
+            <h1>JavaScript String charAt()</h1>
+                <p id="demo10"></p>
+                <script>
+                var text9 = "HELLO WORLD";
+                document.getElementById("demo10").innerHTML = text9.charAt(6);
+                </script>
+            <h1>JavaScript String charCodeAt()</h1>
+                <p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+                <p id="demo11"></p>
+                <script>
+                let text10 = "HELLO WORLD";
+                document.getElementById("demo11").innerHTML = text10.charCodeAt(6);
+                </script>
+            <h1>replace fn</h1>
+            <p>Replace "Microsoft" with "SAP" in the paragraph below:</p>
+            <button onclick="myFunction1()">Try it</button>
+
+            <p id="demo12">Please visit Microsoft and Microsoft!</p>
+            <script>
+            function myFunction1() {
+            let text3 = document.getElementById("demo12").innerHTML; 
+            document.getElementById("demo12").innerHTML =
+            //text3.replace("Microsoft","SAP");
+            text3.replace(/Microsoft/g,"SAP"); //   /g replace all occurences
+            }
+            </script>
+
+            <h1>JavaScript String at()</h1>
+            <h1>JavaScript String Search:</h1>
+                <h1>JavaScript String indexOf()</h1>
+                    <p id="demo"></p>
+                    <script>
+                    let str6 = "Please locate where 'locate' occurs!";
+                    document.getElementById("demo").innerHTML = str6.indexOf("locate");
+                    </script>
+
+                <h1>JavaScript String lastIndexOf()</h1>
+                    <p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+                    <p id="demo21"></p>
+                    <p id="demo11"></p>
+                    <p id="demo111"></p>
+                    <script>
+                    let str7 = "Please locate where 'locate' occurs!";
+                    document.getElementById("demo21").innerHTML = str7.lastIndexOf("locate");
+                    document.getElementById("demo11").innerHTML = str7.lastIndexOf("hello");
+                    document.getElementById("demo111").innerHTML = str6.indexOf("locate",15);
+                    </script>
+
+                <h1>JavaScript String search()</h1>
+                    <p id="demo1111"></p>
+                    <script>
+                    let str11 = "Please locate where 'locate' occurs!";
+                    document.getElementById("demo1111").innerHTML = str11.search("locate");
+                    </script>
+
+                <h1>JavaScript String match()</h1>
+                    <p>Search a string for "ain":</p>
+                    <p id="demo12"></p>
+                    <script>
+                    let text11 = "The rain in SPAIN stays mainly in the plain"; 
+                    document.getElementById("demo12").innerHTML = text11.match(/ain/gi);  //string.match(regexp);regexp :Required. The value to search for, as a regular expression.Returns:	An Array, containing the matches, one item for each match, or null if no match is found
+                    </script>
+
+                <h1>JavaScript String matchAll()</h1>
+                <h1>JavaScript String includes()</h1>
+                <h2>The includes() method returns true if a string contains a specified value.</h2>
+                    <p>Check if a string includes "world":</p>
+                    <p id="demo22"></p>
+                    <p>The includes() method is not supported in Internet Explorer.</p>
+                    <script>
+                    let text22 = "Hello world, welcome to the universe.";
+                    document.getElementById("demo22").innerHTML = text22.includes("world");
+                    </script>
+
+                <h1>JavaScript String startsWith()</h1>
+                <p id="demo23"></p>
+                <p>The startsWith() method is not supported in Internet Explorer.</p>
+                <script>
+                let text23 = "Hello world, welcome to the universe.";
+                document.getElementById("demo23").innerHTML = text23.startsWith("Hello");
+                </script>
+
+                <h1>JavaScript String endsWith()</h1>
+                    <p>Check if a string ends with "Doe":</p>
+                    <p id="demo34"></p>
+                    <p>The endsWith() method is not supported in Internet Explorer.</p>
+                    <script>
+                    let text34 = "John Doe";
+                    document.getElementById("demo34").innerHTML = text34.endsWith("Doe");
+                    </script>
+
+            <h1>JavaScript Template Strings: Back-Tics Syntax, Interpolation</h1>
+            <h2>JavaScript Template Literals</h2>
+            <p>Template literals use back-ticks (``) to define a string:</p>
+            <p id="demo31"></p>
+            <p>Template literals are not supported in Internet Explorer.</p>
+            <script>
+            let text3 = `Hello world!`;
+            document.getElementById("demo31").innerHTML = text3;
+            </script>
+            <p>With back-ticks, you can use both single and double quotes inside a string:</p>
+            <p id="demo32"></p>
+            <script>
+            let text31 = `He's often called "Johnny"`;
+            document.getElementById("demo32").innerHTML = text31;
+            </script>
+            <hr>
+            <h2>Template literals provide an easy way to interpolate variables and expressions into strings.The method is called string interpolation.</h2>
+            <p>Template literals allows variables in strings:</p>
+
+            <p id="demo33"></p>
+            <script>
+            let firstName = "John";
+            let lastName = "Doe";
+            let text32 = `Welcome ${firstName}, ${lastName}!`;
+            document.getElementById("demo33").innerHTML = text32;
+            </script>
+            <h2>JavaScript Template Literals</h2>
+            <p>Template literals allows variables in strings:</p>
+            <p id="demo34"></p>
+            <script>
+            let header = "Templates Literals";
+            let tags = ["template literals", "javascript", "es6"];
+            let html = `<h2>${header}</h2><ul>`;
+            for (const x of tags) {
+            html += `<li>${x}</li>`;
+            }
+            html += `</ul>`;
+            document.getElementById("demo34").innerHTML = html;
+            </script>
+            
+    </body>
+</html>
