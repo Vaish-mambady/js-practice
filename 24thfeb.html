@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sorting and Iteration</title>
+</head>
+<body>
+
+<h2>Topics</h2>
+<ul>
+    <li>Sorting Arrays</li>
+    <li>Reversing an Array</li>
+    <li>JavaScript Array Iteration</li>
+    <li>Array forEach</li>
+    <li>Array map</li>
+    <li>Array flatMap</li>
+    <li>Array filter</li>
+    <li>Array reduce</li>
+    <li>Array reduceRight</li>
+    <li>Array every</li>
+    <li>Array some</li>
+    <li>Array.from</li>
+    <li>Array keys</li>
+    <li>Array entries</li>
+</ul>
+
+<hr>
+
+<h3>Sorting Arrays</h3>
+<p id="demo1"></p>
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+document.getElementById("demo1").innerHTML = fruits;
+</script>
+
+<h3>Reversing an Array</h3>
+<p id="demo2"></p>
+<script>
+fruits.reverse();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+<h3>Array forEach</h3>
+<p id="demo3"></p>
+<script>
+let text = "";
+const numbers = [45, 4, 9, 16, 25];
+numbers.forEach(function(value) {
+  text += value + "<br>";
+});
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+<h3>Array map</h3>
+<p id="demo4"></p>
+<script>
+const numbers2 = numbers.map(function(value) {
+  return value * 2;
+});
+document.getElementById("demo4").innerHTML = numbers2;
+</script>
+
+<h3>Array flatMap</h3>
+<p id="demo5"></p>
+<script>
+const numbers3 = numbers.flatMap(function(value) {
+  return value * 2;
+});
+document.getElementById("demo5").innerHTML = numbers3;
+</script>
+
+<h3>Array filter</h3>
+<p id="demo6"></p>
+<script>
+const over18 = numbers.filter(function(value) {
+  return value > 18;
+});
+document.getElementById("demo6").innerHTML = over18;
+</script>
+
+<h3>Array reduce</h3>
+<p id="demo7"></p>
+<script>
+let sum = numbers.reduce(function(total, value) {
+  return total + value;
+}, 0);
+document.getElementById("demo7").innerHTML = sum;
+</script>
+
+<h3>Array reduceRight</h3>
+<p id="demo8"></p>
+<script>
+let sum2 = numbers.reduceRight(function(total, value) {
+  return total + value;
+}, 0);
+document.getElementById("demo8").innerHTML = sum2;
+</script>
+
+<h3>Array every</h3>
+<p id="demo9"></p>
+<script>
+let allOver18 = numbers.every(function(value) {
+  return value > 18;
+});
+document.getElementById("demo9").innerHTML = allOver18;
+</script>
+
+<h3>Array some</h3>
+<p id="demo10"></p>
+<script>
+let someOver18 = numbers.some(function(value) {
+  return value > 18;
+});
+document.getElementById("demo10").innerHTML = someOver18;
+</script>
+
+<h3>Array.from</h3>
+<p id="demo11"></p>
+<script>
+const text1 = "ABCDEFG";
+const myArr = Array.from(text1);
+document.getElementById("demo11").innerHTML = myArr;
+</script>
+
+<h3>Array keys</h3>
+<p id="demo12"></p>
+<script>
+const keys = fruits.keys();
+let keyText = "";
+for (let x of keys) {
+  keyText += x + "<br>";
+}
+document.getElementById("demo12").innerHTML = keyText;
+</script>
+
+<h3>Array entries</h3>
+<p id="demo13"></p>
+<script>
+const entries = fruits.entries();
+let entryText = "";
+for (let x of entries) {
+  entryText += x + "<br>";
+}
+document.getElementById("demo13").innerHTML = entryText;
+</script>
+
+</body>
+</html>
