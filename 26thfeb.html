@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>26th February 2026</title>
+    </head>
+    <body>
+        Topics:
+        <ul>
+            <li>JavaScript Math Object:</li>
+            <ul>
+                <li>Math.round()</li>
+                <li>Math.ceil()</li>
+                <li>Math.floor()</li>
+                <li>Math.trunc()</li>
+                <li>Math.sign()</li>
+                <li>Math.pow()</li>
+                <li>Math.sqrt()</li>
+                <li>Math.abs()</li>
+                <li>Math.sin()</li>
+                <li>Math.cos()</li>
+                <li>Math.min() and Math.max()</li>
+                <li>Math.random()</li>
+                <li>Math.log()</li>
+                <li>Math.log2()</li>
+                <li>Math.log10()</li>
+            </ul>
+            <li>JavaScript Booleans</li>
+            <li>JavaScript Conditional Statements:</li>
+            <li>The if Statement Syntax</li>
+            <li>The else Statement Syntax</li>
+            <li>The else if Statement Syntax</li>
+            <li>JavaScript Switch Statement</li>
+            <li>The For Loop</li>
+            <li>The For In Loop</li>
+            <li>The For Of Loop</li>
+            <li>The While Loop</li>
+            <li>The Do While Loop</li>
+            <li>JavaScript Break and Continue</li>
+            <li>JavaScript Sets</li>
+            <li>How to Create a Set</li>
+        </ul>
+        <h1>JavaScript Math Object: </h1>
+
+        <h1>Math.round()</h1>
+        <h2>JavaScript Math.round():Math.round(x) returns the value of x rounded to its nearest integer</h2>
+        <p id="demo"></p>
+        <script>
+        document.getElementById("demo").innerHTML = Math.round(4.6);
+        </script>
+        <hr>
+
+        <h1>Math.ceil()</h1>
+        <h2>JavaScript Math.ceil()Math.ceil() rounds a number <strong>up</strong> to its nearest integer</h2>
+        <p id="demo1"></p>
+        <script>
+        document.getElementById("demo1").innerHTML = Math.ceil(4.4);
+        </script>
+        <hr>
+
+        <h1>Math.floor()</h1>
+        <h2>JavaScript Math.floor()Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer</h2>
+        <p id="demo2"></p>
+        <script>
+        document.getElementById("demo2").innerHTML = Math.floor(4.7);
+        </script>
+        <hr>
+
+        <h1>Math.trunc()</h1>
+        <h2>JavaScript Math.trunc()Math.trunc(x) returns the integer part of x:</h2>
+        <p id="demo3"></p>
+        <script>
+        document.getElementById("demo3").innerHTML = Math.trunc(4.7);
+        </script>
+        <hr>
+
+        <h1>Math.sign()</h1>
+        <h2>JavaScript Math.sign()Math.sign(x) returns if x is negative, null or positive:</h2>
+        <p id="demo4"></p>
+        <script>
+        document.getElementById("demo4").innerHTML = Math.sign(4);
+        </script>
+        <hr>
+
+        <h1>Math.pow()</h1>
+        <h2>JavaScript Math.pow()Math.pow(x,y) returns the value of x to the power of y</h2>
+        <p id="demo5"></p>
+        <script>
+        document.getElementById("demo5").innerHTML = Math.pow(8,2);
+        </script>
+        <hr>
+
+        <h1>Math.sqrt()</h1>
+        <h2>JavaScript Math.sqrt()Math.sqrt(x) returns the square root of x</h2>
+        <p id="demo6"></p>
+        <script>
+        document.getElementById("demo6").innerHTML = Math.sqrt(64);
+        </script>
+        <hr>
+
+        <h1>Math.abs()</h1>
+        <h2>JavaScript Math.abs()Math.abs(x) returns the absolute (positive) value of x</h2>
+        <p id="demo7"></p>
+        <script>
+        document.getElementById("demo7").innerHTML = Math.abs(-4.7);
+        </script>
+        <hr>
+
+        <h1>Math.sin()</h1>
+        <h1>Math.cos()</h1>
+        <h1>Math.min() and Math.max()</h1>
+        <h2>JavaScript Math.min()Math.min() returns the lowest value in a list of arguments:</h2>
+        <p id="demo8"></p>
+        <script>
+        document.getElementById("demo8").innerHTML =
+        Math.min(0, 150, 30, 20, -8, -200);
+        </script>
+        <hr>
+        <h2>JavaScript Math.max()Math.max() returns the highest value in a list of arguments</h2>
+        <p id="demo9"></p>
+        <script>
+        document.getElementById("demo9").innerHTML =
+        Math.max(0, 150, 30, 20, -8, -200);
+        </script>
+        <hr>
+
+        <h1>Math.random()</h1>
+        <h2>JavaScript Math.random()Math.random() returns a random number between 0 and 1</h2>
+        <p id="demo10"></p>
+        <p>Tip: Click on "Run" several times.</p>
+        <script>
+        document.getElementById("demo10").innerHTML = Math.random();
+        </script>
+
+        <h1>Math.log()</h1>
+        <h1>Math.log2()</h1>
+        <h1>Math.log10()</h1>
+        <hr>
+        <h1>JavaScript Booleans</h1>
+        <p>Display the value of Boolean(10 > 9):</p>
+        <p id="demo11"></p>
+        <script>
+        document.getElementById("demo11").innerHTML = Boolean(10 > 9);
+        </script>
+        <hr>
+        <h2>JavaScript Booleans</h2>
+        <p>Display the Boolean value of 0:The Boolean value of 0 (zero) is false:</p>
+        <!--The Boolean value of -0 (minus zero) is false:
+        The Boolean value of "" (empty string) is false:
+        The Boolean value of undefined is false:
+        The Boolean value of null is false:
+        The Boolean value of false is false:-->
+        <p id="demo12"></p>
+        <script>
+        let x = 0;
+        document.getElementById("demo12").innerHTML = Boolean(x);
+        </script>
+        <h1>JavaScript Conditional Statements:</h1>
+        <li>The if Statement</li>
+        <li>The else Statement</li>
+        <li>The else if Statement</li>
+        <h2>JavaScript if</h2>
+        <p>Display "Good day!" if the hour is less than 18:00:</p>
+        <p id="demo13">Good Evening!</p>
+        <script>
+        if (new Date().getHours() < 18) {
+        document.getElementById("demo13").innerHTML = "Good day!";
+        }
+        </script>
+        <hr>
+        <h2>JavaScript if .. else</h2>
+        <p>A time-based greeting:</p>
+        <p id="demo14"></p>
+        <script>
+        const hour = new Date().getHours(); 
+        let greeting;
+        if (hour < 15) {
+        greeting = "Good day";
+        } else {
+        greeting = "Good evening";
+        }
+        document.getElementById("demo14").innerHTML = greeting;
+        </script>
+        <h2>JavaScript if .. else if</h2>
+        <p>A time-based greeting:</p>
+        <p id="demo15"></p>
+        <script>
+        const time = new Date().getHours();
+        let greeting2;
+        if (time < 10) {
+        greeting2 = "Good morning";
+        } else if (time < 18) {
+        greeting2 = "Good day";
+        } else {
+        greeting2 = "Good evening";
+        }
+        document.getElementById("demo15").innerHTML = greeting2;
+        </script>
+
+        <h1>JavaScript Switch Statement</h1>
+        <h2>JavaScript switch</h2>
+        <p id="demo16"></p>
+        <script>
+        let day;
+        switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+        }
+        document.getElementById("demo16").innerHTML = "Today is " + day;
+        </script>
+        <hr>
+        <h2>JavaScript switch</h2>
+        <p>If no matching cases are found, the program continues to the default label.</p>
+        <p id="demo16"></p>
+
+        <h1>The For Loop</h1>
+        <h1>The For In Loop</h1>
+        <h1>The For Of Loop</h1>
+        <h2>JavaScript For Loop</h2>
+        <p id="demo17"></p>
+        <script>
+        let text = "";
+        for (let i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo17").innerHTML = text;
+        </script>
+        <hr>
+        <h2>JavaScript For In Loop</h2>
+        <p>The for in statement loops through the properties of an object:</p>
+        <p id="demo18"></p>
+        <script>
+        const person = {fname: "John", lname: "Doe", age:25}; 
+        let txt = "";
+        for (let x in person) {
+        txt += person[x] + " ";
+        }
+        document.getElementById("demo18").innerHTML = txt;
+        </script>
+        <hr>
+        <h2>JavaScript For Of Loop</h2>
+        <p>The for of statement loops through the values of any iterable object:</p>
+        <p id="demo19"></p>
+        <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+        let text3 = "";
+        for (let x of cars) {
+        text3 += x + "<br>";
+        }
+        document.getElementById("demo19").innerHTML = text3;
+        </script>
+
+        <h1>The While Loop</h1>
+        <h1>The Do While Loop</h1>
+        <h2>JavaScript While Loop</h2>
+        <p id="demo20"></p>
+        <script>
+        let text1 = "";
+        let i = 0;
+        while (i < 10) {
+        text1 += "<br>The number is " + i;
+        i++;
+        }
+        document.getElementById("demo20").innerHTML = text1;
+        </script>
+        <hr>
+        <h2>JavaScript Do While Loop</h2>
+        <p id="demo21"></p>
+        <script>
+        let text2 = ""
+        let i1 = 0;
+        do {
+        text2 += "<br>The number is " + i1;
+        i1++;
+        }
+        while (i1 < 10);  
+        document.getElementById("demo21").innerHTML = text2;
+        </script>
+
+        <h1>JavaScript Break and Continue</h1>
+        <h2>JavaScript Loops: The break statement "jumps out" of a loop.</h2>
+        <p id="demo22"></p>
+        <script>
+        let text4 = "";
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) 
+        { 
+            break; 
+        }
+        text4 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo22").innerHTML = text4;
+        </script>
+        <hr>
+        <h2>JavaScript Loops:The continue statement "jumps over" one iteration in the loop.</h2>
+
+        <p>A loop which will skip the step where i = 3.</p>
+
+        <p id="demo23"></p>
+
+        <script>
+        let text5 = "";
+        for (let i1 = 0; i1 < 10; i1++) {
+        if (i1 === 3) 
+        { 
+            continue; 
+        }
+        text5 += "The number is " + i1 + "<br>";
+        }
+        document.getElementById("demo23").innerHTML = text5;
+        </script>
+        <h1>JavaScript Sets</h1>
+        <h1>How to Create a Set</h1>
+        <h2>JavaScript Sets</h2>
+        <p>Create a Set from an Array:</p>
+        <p id="demo24"></p>
+
+        <script>
+        // Create a Set
+        const letters = new Set(["a", "b", "c"]);
+
+        // Display set.size
+        document.getElementById("demo24").innerHTML = letters.size;
+        </script>
+        <hr>
+
+        <h2>JavaScript Sets</h2>
+        <p>Add values to a Set:</p>
+
+        <p id="demo25"></p>
+        <script>
+        // Create a Set
+        const letters1 = new Set();
+
+        // Add Values to the Set
+        letters1.add("a");
+        letters1.add("b");
+        letters1.add("c");
+
+        // Display set.size
+        document.getElementById("demo25").innerHTML = letters1.size;
+        </script>
+        <hr>
+
+        <h2>JavaScript Sets</h2>
+        <p>Add variables to a Set:</p>
+        <p id="demo26"></p>
+
+        <script>
+        // Create a Set
+        const letters2 = new Set();
+        // Create Variables
+        const a2 = "a";
+        const b2 = "b";
+        const c2 = "c";
+
+        // Add the Variables to the Set
+        letters2.add(a2);
+        letters2.add(b2);
+        letters2.add(c2);
+
+        // Display set.size
+        document.getElementById("demo26").innerHTML = letters2.size;
+        </script>
+        <hr>
+        <h2>JavaScript Sets The values() method returns a new iterator object containing all the values in a Set:</h2>
+        <p>Iterating Set values:</p>
+
+        <p id="demo27"></p>
+        <script>
+        // Create a Set
+        const letters3 = new Set(["a", "b", "c"]);
+
+        // List all Elements
+        let text6 = "";
+        for (const x of letters3.values()) {
+        text6 += x + "<br>";
+        }
+
+        document.getElementById("demo27").innerHTML = text6;
+        </script>
+
+    </body>
+</html>
