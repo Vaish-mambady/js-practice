@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>28th feb 2026 practice</title>
+    </head>
+    <body>
+        Topics:
+        <ul>
+            <li>JavaScript Arrow Function: With out Arrow Function, With Arrow Function, Arrow Functions Return Value by Default, Arrow Function with Parameters</li>
+            <li>What about 'this' in Arrow Function: This keyword in Regular Function, This keyword in Arrow Function</li>
+            <li>JavaScript Classes: The Constructor Method, Class Methods Syntax, Class Methods with Parameter</li>
+            <li>JavaScript Modules: Export, Named Exports, In-line individually, All at once at the bottom, Default Exports</li>
+            <li>JavaScript JSON: What is JSON? JSON Syntax Rules</li>
+            <li>Code Debugging, JavaScript Debuggers, The console.log() Method, The debugger keyword</li>
+        </ul>
+        With out Arrow Function
+        <h1>Function</h1>
+        <p>This demonstrates a regular function, NOT an arrow function.</p>
+        <p id="demo"></p>
+        
+        <script>
+        hello = function() {
+        return "Hello World!";
+        }
+        document.getElementById("demo").innerHTML = hello();
+        </script>
+        With Arrow Function
+
+        <p>A demonstration of a simple arrow function.</p>
+
+        <p id="demo1"></p>
+        
+        <script>
+        hello = () => {
+        return "Hello World!";
+        }
+
+        document.getElementById("demo1").innerHTML = hello();
+        </script>
+        Arrow Functions Return Value by Default
+        <h1>Arrow Function</h1>
+        <h2>Implicit Return</h2>
+
+        <p>The arrow function expects a return value, and returns the value by default, without the <strong>return</strong> keyword.</p>
+
+        <p id="demo2"></p>
+        
+        <script>
+        hello = () => "Hello World!"; <!--Note: This works only if the function has only one statement.-->
+
+        document.getElementById("demo2").innerHTML = hello();
+        </script>
+        Arrow Function with Parameters
+        <h1>Arrow Function</h1>
+        <p>A demonstration of an arrow function in one line, with parameters.</p>
+        <p id="demo3"></p>  
+        <script>
+        hello = (val) => "Hello " + val;
+        <!-- hello = val => "Hello " + val; you can skip the parentheses when you have only one parameter-->
+        document.getElementById("demo3").innerHTML = hello("World");
+        </script>
+        This keyword in Regular Function
+
+        <h1>Regular Function</h1>
+
+        <p>The <strong>this</strong> keyword represents different objects depending on how the function was called.</p>
+
+        <button id="btn">Click Me!</button>
+
+        <p><strong>this</strong> represents:</p>
+
+        <p id="demo4"></p>
+
+        <p>See the difference before and after the button is clicked.</p>
+        <script>
+        class Header {
+        constructor() {
+            this.color = "Red";
+        }
+        changeColor = function() {
+            document.getElementById("demo4").innerHTML += this;
+        }
+        }
+        const myheader1 = new Header();
+        <!-- call a method twice, first when the page loads, and once again when the user clicks a button.returns two different objects (window and button)-->
+        //The window object calls the function:
+        window.addEventListener("load", myheader1.changeColor);
+        //A button object calls the function:
+        document.getElementById("btn").addEventListener("click", myheader1.changeColor);
+        </script>
+        This keyword in Arrow Function
+        <h1>Arrow Function</h1>
+
+        <p>The <strong>this</strong> keyword represents the Header object.</p>
+
+        <button id="btn1">Click Me!</button>
+
+        <p><strong>this</strong> represents:</p>
+        <p id="demo5"></p>
+
+        <script>
+        class Header {
+        constructor() {
+            this.color = "Red";
+        }
+        changeColor = () => {
+            document.getElementById("demo5").innerHTML += this;
+        }
+        }
+
+        const myheader = new Header();
+
+        //The window object calls the function:
+        window.addEventListener("load", myheader.changeColor);
+
+        //A button object calls the function:
+        document.getElementById("btn1").addEventListener("click", myheader.changeColor);
+        </script>
+<p>How to use a JavaScript Class.</p>
+<p id="demo6"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+const myCar = new Car("Ford", 2014);
+document.getElementById("demo6").innerHTML = myCar.name + " " + myCar.year;
+</script>
+<h1>JavaScript Class Methods</h1>
+<p>How to define and use a Class method.</p>
+<p id="demo7"></p>
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+const myCar1 = new Car("Ford", 2014);
+document.getElementById("demo7").innerHTML = "My car is " + myCar1.age() + " years old.";
+</script>
+<p id="demo8"></p>
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return x - this.year;
+  }
+}
+const date = new Date();
+let year = date.getFullYear();
+const myCar2 = new Car("Ford", 2014);
+document.getElementById("demo8").innerHTML= "My car is " + myCar2.age(year) + " years old.";
+</script>
+<p id="demo9"></p>
+
+<script type="module">
+import { name, age } from "person.js";
+
+let text = "My name is " + name + ", I am " + age + ".";
+
+document.getElementById("demo9").innerHTML = text;
+</script>
+<h1>JavaScript Modules</h1>
+<!--Modules only work with the HTTP(s) protocol.
+A web-page opened via the file:// protocol cannot use import / export.-->
+<p id="demo10"></p>
+
+<script type="module">
+import message from "./message.js";
+
+document.getElementById("demo10").innerHTML = message();
+
+</script>
+<h2>Create Object from JSON String</h2>
+<p id="demo11"></p>
+<script>
+let text1 = '{"employees":[' +
+'{"firstName": "John", "lastName": "Doe" },' +
+'{"firstName": "Fred", "lastName": "Smith" },' +
+'{"firstName": "Peter", "lastName": "Jones" }]}’;
+
+//A common use of JSON is to read data from a web server, and display the data in a web page. JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:(obj here)
+const obj = JSON.parse(text1);
+
+//Finally, use the new JavaScript object in your page:
+document.getElementById("demo11").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+<h2>JavaScript Debugger</h2>
+<p id="demo12"></p>
+<p>With the debugger turned on, the code below should stop executing before it executes the third line.</p>
+<!--right click-Inspect and then run-->
+<script>
+let x = 15 * 5;
+debugger;
+document.getElementById("demo12").innerHTML = x;
+</script>
+    </body>
+</html>
